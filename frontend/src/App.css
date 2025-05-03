@@ -1,0 +1,70 @@
+.App {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.App-header {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.App-main {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  min-height: 300px;
+}
+
+.App-footer {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  resize: vertical;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.note-link {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #4CAF50;
+  border-radius: 5px;
+  background-color: #f8fff8;
+}
+
+.note-content {
+  text-align: left;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  margin: 20px 0;
+  white-space: pre-wrap;
+} 
