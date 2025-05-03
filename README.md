@@ -1,22 +1,58 @@
 # Secure Messages
 
-A web application for creating self-destructing, secure messages that can only be viewed once. Similar to Privnote, this application allows users to share sensitive information securely.
+A secure messaging application that allows users to communicate privately and securely.
 
 ## Features
 
-- Create encrypted, self-destructing notes
-- Each note can only be viewed once
-- Notes are automatically deleted after being viewed
-- No user registration required
+- End-to-end encryption
+- Self-destructing messages
+- Secure authentication
+- User-friendly interface
 
-## Technology Stack
+## Technologies
 
-- Backend: ASP.NET Core
-- Frontend: React with TypeScript
-- Database: In-memory (configurable for PostgreSQL)
-- Cache: In-memory (configurable for Redis)
-- Containerization: Docker support
+- Frontend: React
+- Backend: Node.js/Express
+- Database: MongoDB
+- Authentication: JWT
 
 ## Getting Started
 
-Instructions for setting up and running the application will be provided as development progresses. 
+### Prerequisites
+
+- Node.js
+- Docker and Docker Compose (optional)
+
+### Installation
+
+1. Clone the repository
+   ```
+   git clone https://github.com/muhammadsohaib2000/Secure-Messages.git
+   cd Secure-Messages
+   ```
+
+2. Install dependencies
+   ```
+   # Backend
+   cd backend
+   npm install
+   
+   # Frontend
+   cd ../frontend
+   npm install
+   ```
+
+3. Run the application
+   ```
+   # Using Docker
+   docker-compose up
+   
+   # Or run separately
+   # Backend
+   cd backend
+   npm start
+   
+   # Frontend
+   cd frontend
+   npm start
+   ``` 
