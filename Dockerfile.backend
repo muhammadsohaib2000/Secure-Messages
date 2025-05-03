@@ -1,0 +1,26 @@
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+
+# Copy project files
+COPY backend/NoteApp.sln ./
+COPY backend/NoteApp.Domain/ ./NoteApp.Domain/
+COPY backend/NoteApp.Application/ ./NoteApp.Application/
+COPY backend/NoteApp.Infrastructure/ ./NoteApp.Infrastructure/
+COPY backend/NoteApp.Api/ ./NoteApp.Api/
+
+# Restore dependencies
+RUN dotnet restore "./NoteApp.Api/NoteApp.Api.csproj"
+
+# Build and publish
+RUN dotnet publish "./NoteApp.Api/NoteApp.Api.csproj" -c Release -o /app/publish
+
+# Runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine
+WORKDIR /app
+COPY --from=build /app/publish .
+
+# Configure app to listen on port 80
+ENV ASPNETCORE_URLS=http://+:80
+EXPOSE 80
+
+ENTRYPOINT ["dotnet", "NoteApp.Api.dll"] 
