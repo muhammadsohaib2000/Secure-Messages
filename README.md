@@ -1,26 +1,14 @@
-# Secure Messages
 
-A secure messaging application that allows users to communicate privately and securely.
-
-## Features
-
-- End-to-end encryption
-- Self-destructing messages
-- Secure authentication
-- User-friendly interface
 
 ## Technologies
 
 - Frontend: React
-- Backend: Node.js/Express
-- Database: MongoDB
-- Authentication: JWT
+- Backend: dotnet
+- Database: PostgresSql
 
 ## Getting Started
 
 ### Prerequisites
-
-- Node.js
 - Docker and Docker Compose (optional)
 
 ### Installation
@@ -32,10 +20,7 @@ A secure messaging application that allows users to communicate privately and se
    ```
 
 2. Install dependencies
-   ```
-   # Backend
-   cd backend
-   npm install
+  
    
    # Frontend
    cd ../frontend
@@ -50,7 +35,7 @@ A secure messaging application that allows users to communicate privately and se
    # Or run separately
    # Backend
    cd backend
-   npm start
+  dotnet run
    
    # Frontend
    cd frontend
